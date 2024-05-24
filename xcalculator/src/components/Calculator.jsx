@@ -40,7 +40,7 @@ export default function Calculator() {
   return (
     <div>
         <h1> React Calculator </h1>
-        <input value={inputValue}  />
+        <input type='text' value={inputValue}  />
         <div>{calculatedValue}</div>
         <div className={styles.container}>
             <div className={styles.buttonsGrid}>
