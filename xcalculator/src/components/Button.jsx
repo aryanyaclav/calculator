@@ -18,6 +18,6 @@ export default function Button({value, writeValue , clearButton, calculate}) {
         
     }
   return (
-    <button onClick={handleClick}>{value}</button>
+    <input type='button' onClick={handleClick} value={value}/>
   )
 }
