@@ -29,14 +29,14 @@ function evaluateTokens(tokens){
             let left = tokens[i-1]
             let right = tokens[i+1]
             if(isNaN(left) || isNaN(right)){
-                return Error
+                return "Error"
             }
             if(right === 0 && tokens[i] === '/'){
                 if(left === 0){
-                    return NaN
+                    return "NaN"
                 }
                 if(left > 0){
-                    return Infinity
+                    return "Infinity"
                 }
             }
 

@@ -13,12 +13,17 @@ export default function Calculator() {
     let [calculatedValue, setcalculatedValue] = useState('')
 
     function calculate(){
-        console.log(inputValue)
         if(inputValue === ''){
             setcalculatedValue("Error")
             return
         }
-        let result = calculation(inputValue)
+        let result;
+        try {
+            result = calculation(inputValue);
+        } catch (e) {
+            result = e.message || "Error"; // Convert the error object to a string message
+        }
+
         setcalculatedValue(result)
     }
 
